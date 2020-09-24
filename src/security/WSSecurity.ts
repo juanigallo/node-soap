@@ -99,7 +99,7 @@ export class WSSecurity implements ISecurity {
     }
 
     return '<wsse:Security ' + (this._actor ? 'soap:actor="' + this._actor + '" ' : '') +
-      (this._mustUnderstand ? 'soapenv:mustUnderstand="1" ' : '') +
+      (this._mustUnderstand ? '' : '') +
       'xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">' +
       timeStampXml +
       '<wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-' + created + '">' +
